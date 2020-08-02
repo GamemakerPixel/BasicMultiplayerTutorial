@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = 316.0
+margin_top = 181.0
+margin_right = 724.0
+margin_bottom = 407.0
+
+[node name="Send" type="Button" parent="."]
+margin_left = 469.0
+margin_top = 410.5
+margin_right = 565.0
+margin_bottom = 430.5
+text = "Send"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Create" type="Button" parent="."]
+margin_left = 104.5
+margin_top = 210.5
+margin_right = 222.5
+margin_bottom = 244.5
+text = "Create Server"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Join" type="Button" parent="."]
+margin_left = 104.5
+margin_top = 252.5
+margin_right = 222.5
+margin_bottom = 286.5
+text = "Join Server"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Send" to="." method="_on_Send_pressed"]
+[connection signal="pressed" from="Create" to="." method="_on_Create_pressed"]
+[connection signal="pressed" from="Join" to="." method="_on_Join_pressed"]
